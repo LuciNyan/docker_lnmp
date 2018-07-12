@@ -1,4 +1,4 @@
-version: "2"
+version: "3"
 
 services:
     nginx:
@@ -18,9 +18,9 @@ services:
         - php72:fpm72
 
     mysql:
-        image: mysql:latest
+        image: mysql:5.7
         ports:
-            - "3306:3306"
+            - "10001:3306"
         privileged: true
         volumes:
             - ./conf/mysql/my.cnf:/etc/mysql/my.cnf:ro
